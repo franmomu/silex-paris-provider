@@ -10,11 +10,15 @@ class ParisServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        if (isset($app['idiorm.connection'])) {
-            \ORM::configure($app['idiorm.connection']);
-        }
-
         $app['paris'] = $app->share(function ($app) {
+
+            $connection = isset($app['idiorm.connection']) ? $app['idiorm.connection'] : null;
+            \ORM::configure($connection);
+
+            if (isset($app['paris.model.prefix'])) {
+                \Model::$auto_prefix_models = $app['paris.model.prefix'];
+            }
+
             return new ParisService();
         });
     }
