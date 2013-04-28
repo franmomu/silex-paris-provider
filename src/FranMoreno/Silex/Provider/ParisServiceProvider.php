@@ -12,8 +12,8 @@ class ParisServiceProvider implements ServiceProviderInterface
     {
         $app['paris'] = $app->share(function ($app) {
 
-            $connection = isset($app['idiorm.connection']) ? $app['idiorm.connection'] : null;
-            \ORM::configure($connection);
+            $config = isset($app['idiorm.config']) ? $app['idiorm.config'] : null;
+            \ORM::configure($config);
 
             if (isset($app['paris.model.prefix'])) {
                 \Model::$auto_prefix_models = $app['paris.model.prefix'];
