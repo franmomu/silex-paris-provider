@@ -1,0 +1,29 @@
+{
+    "name": "franmomu/silex-paris-provider",
+    "type": "library",
+    "description": "Silex ServiceProvider for Paris Library",
+    "keywords": ["silex", "service provider", "paris", "idiorm"],
+    "homepage": "https://github.com/franmomu/silex-paris-provider",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fran Moreno",
+            "email": "franmomu@gmail.com",
+            "homepage": "http://showmethecode.es"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.0.*",
+        "j4mie/paris": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "FranMoreno": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
