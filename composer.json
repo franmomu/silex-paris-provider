@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "silex/silex": "1.0.*",
+        "silex/silex": "~1.0",
         "j4mie/paris": "dev-master"
     },
     "autoload": {
