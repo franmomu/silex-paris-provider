@@ -11,7 +11,7 @@ $app->register(new FranMoreno\Silex\Provider\ParisServiceProvider());
 #### Parameters
 
 ```
-$app['idiorm.connection'] = array(
+$app['idiorm.config'] = array(
     'connection_string' => 'mysql:host=localhost;dbname=my_database',
     'username' => 'database_user',
     'password' => 'top_secret'
